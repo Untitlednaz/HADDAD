@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Saisie de chaîne de caractères</title>
+	<script>
+		function saisieChaine() {
+			var chaine = prompt("Veuillez saisir une chaîne de caractères:");
+			if (chaine) {
+				var resultat = chaine.charAt(0).toUpperCase() + chaine.slice(1);
+				console.log(resultat);
+			}
+		}
+	</script>
+</head>
+<body>
+	<button id="btnchaine" onclick="saisieChaine()">Saisissez une chaîne…</button>
+</body>
+</html>

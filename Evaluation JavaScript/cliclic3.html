@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Clics et déclics</title>
+	<script>
+		function changerTexte() {
+			var paragraphe = document.querySelector('p');
+			paragraphe.textContent = "Pierre Dac a dit : « Parler pour ne rien dire et ne rien dire pour parler... »";
+		}
+	</script>
+</head>
+<body>
+	<p>Une citation de Pierre Dac : <q onclick="changerTexte()">Parler pour ne rien dire et ne rien dire pour parler sont les deux principes majeurs...</q></p>
+</body>
+</html>

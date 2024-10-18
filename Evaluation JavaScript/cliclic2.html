@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Clics et déclics</title>
+	<script>
+		function changerCouleurParent() {
+			var citation = document.querySelector('q');
+			var parent = citation.parentElement; 
+			parent.style.color = 'navy';
+		}
+	</script>
+</head>
+<body>
+	<p>Une citation de Pierre Dac&thinsp;: <q onclick="changerCouleurParent()">Parler pour ne rien dire et ne rien dire pour parler sont les deux principes majeurs et rigoureux de tous ceux qui feraient mieux de la fermer avant de l'ouvrir.</q></p>
+</body>
+</html>

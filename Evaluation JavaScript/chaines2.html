@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Saisie de chaîne de caractères</title>
+	<script>
+		function saisieChaineAlternee() {
+			var chaine = prompt("Veuillez saisir une chaîne de caractères:");
+			if (chaine) {
+				var resultat = '';
+				for (var i = 0; i < chaine.length; i++) {
+					if (i % 2 === 0) {
+						resultat += chaine[i].toUpperCase(); 
+					} else {
+						resultat += chaine[i].toLowerCase(); 
+					}
+				}
+				console.log(resultat);
+			}
+		}
+	</script>
+</head>
+<body>
+	<button id="btnchaine" onclick="saisieChaineAlternee()">Saisissez une chaîne…</button>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sliders</title>
+	<style>
+		label span {
+			font-weight: bold;
+			color: blue;
+			margin-left: 10px;
+		}
+	</style>
+	<script>
+		let lastSpan = null; 
+
+		function changeLabel(event) {
+			const input = event.target;
+			const label = document.querySelector(`label[for=${input.id}]`);
+			let span = label.querySelector('span');
+
+			if (lastSpan && lastSpan !== span) {
+				lastSpan.textContent = '';
+			}
+
+			span.textContent = input.value;
+			lastSpan = span; 
+		}
+
+		window.onload = function() {
+			const sliders = document.querySelectorAll('input[type="range"]');
+			sliders.forEach(slider => {
+				slider.addEventListener('change', changeLabel);
+			});
+		}
+	</script>
+</head>
+<body>
+
+<label for="slider_red">Niveau de rouge<span></span></label><input id="slider_red" type="range" min="0" max="255" step="5"><br>
+<label for="slider_green">Niveau de vert<span></span></label><input id="slider_green" type="range" min="0" max="255" step="5"><br>
+<label for="slider_blue">Niveau de bleu<span></span></label><input id="slider_blue" type="range" min="0" max="255" step="5"><br>
+<label for="slider_size">Taille<span></span></label><input id="slider_size" type="range" min="8" max="16" step="1"><br>
+
+<p id="info">Ceci est un texte.</p>
+
+</body>
+</html>
